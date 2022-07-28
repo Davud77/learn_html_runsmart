@@ -109,12 +109,25 @@
   font-size: 12px;
   font-weight: 500;
   text-transform: uppercase;
+  text-align: center;
 }
 .button_main {
   width: 300px;
   height: 50px;
   font-size: 16px;
   margin-top: 67px;
+}
+.button_submit {
+  width: 100%;
+  height: 55px;
+  color: #fff;
+  font-size: 16px;
+}
+.button_mini {
+  width: 131px;
+  height: 40px;
+  font-size: 14px;
+  align-items: center;
 }
 
 .advantages {
@@ -155,6 +168,13 @@
   font-size: 30px;
   font-weight: 700;
   text-align: center;
+  text-transform: uppercase;
+}
+.title_left {
+  color: #fff;
+  -moz-text-align-last: left;
+       text-align-last: left;
+  font-size: 36px;
 }
 
 .carousel {
@@ -217,7 +237,7 @@
   display: block;
   margin: 0 auto;
   max-width: 100%;
-  height: 140px;
+  height: 200px;
 }
 .catalog__item_subtitle {
   margin-top: 20px;
@@ -253,4 +273,53 @@
 .catalog__item_footer {
   display: flex;
   justify-content: space-between;
+}
+.catalog__item_old_price {
+  color: #555555;
+  font-size: 14px;
+  font-weight: 300;
+  text-decoration: line-through;
+}
+.catalog__item_prise {
+  font-size: 20px;
+  font-weight: 700;
+}
+.catalog__item_wrapper {
+  display: flex;
+  width: calc(200% + 40px);
+}
+.catalog__item_content {
+  width: 50%;
+}
+.catalog__item_list {
+  width: 50%;
+}
+
+.consultation {
+  min-height: 680px;
+  padding: 100px 0 92px 0;
+  background: url("../img/consultation.jpg") center center/cover no-repeat;
+}
+.consultation_descr {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.feed_form {
+  margin-top: 36px;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+.feed_form input {
+  height: 50px;
+  border-radius: 5px;
+  background-color: #fff;
+  margin-bottom: 15px;
+  border: none;
+  padding: 0 20px;
+  color: #4b4b4b;
+  font-size: 14px;
+  font-weight: 300;
 }/*# sourceMappingURL=style.css.map */

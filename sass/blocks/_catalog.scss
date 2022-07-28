@@ -49,7 +49,7 @@
             display: block;
             margin: 0 auto;
             max-width: 100%;
-            height: 140px;
+            height: 200px;
         }
         &_subtitle {
             margin-top: 20px;
@@ -87,10 +87,25 @@
             justify-content: space-between;
         }
         &_old_price {
-
+            color: #555555;
+            font-size: 14px;
+            font-weight: 300;
+            text-decoration: line-through;
         }
         &_prise {
+            font-size: 20px;
+            font-weight: 700;
+        }
+        &_wrapper {
+            display: flex;
+            width: calc(200% + 40px);
+        }
+        &_content {
+            width: 50%;
             
+        }
+        &_list {
+            width: 50%;
         }
     }
 }
