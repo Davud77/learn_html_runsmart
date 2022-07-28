@@ -1,0 +1,41 @@
+.catalog {
+    padding-bottom: 100px;
+    &__tabs {
+        margin-top: 70px;
+        list-style-type: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 0;
+        padding-bottom: 0;
+
+    }
+    &__tab {
+        width: 220px;
+        height: 50px;
+        border: 2px solid #d0d0d0;
+        color: #6b6b6b;
+        font-size: 18px;
+        font-weight: 400;
+        text-transform: uppercase;
+        text-align: center;
+        line-height: 48px;
+        transform: skewX(-25deg);
+        margin: 0 5px;
+        cursor: pointer;
+        transition: 500ms;
+        &:hover {
+            box-shadow: 3px 3px 8px red;
+            border: none;
+        }
+        div {
+            transform: skewX(25deg);
+        }
+        &__active {
+            color: #fff;
+            background-color: red;
+            border: none;
+        }
+    }
+}
+
