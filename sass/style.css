@@ -306,6 +306,21 @@
   font-weight: 500;
 }
 
+.feed__item {
+  margin-top: 80px;
+  display: flex;
+}
+.feed__item_text {
+  margin-left: 60px;
+}
+.feed__item_text_title {
+  font-size: 18px;
+  font-weight: 700;
+}
+.feed__item_text_content {
+  margin-top: 15px;
+}
+
 .feed_form {
   margin-top: 36px;
   display: flex;
