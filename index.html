@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
     <link rel="stylesheet" href="css/font.css">
     <link rel="stylesheet" href="sass/style.css">
-    <link rel="stylesheet" type="text/css" href="css/slick.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
+
+    <!-- <link rel="stylesheet" type="text/css" href="css/slick.css"/> -->
 </head>
 <body>
     <section class="promo">
@@ -23,7 +25,7 @@
                 </div>
                 <div class="header__contacts">
                     <a href="tel:88005553535" class="header__phone">88005553535</a>
-                    <button class="button">Заказать звонок</button>
+                    <button data-modal="consultations" class="button">Заказать звонок</button>
                 </div>
             </header>
             <div class="promo__wrapper">
@@ -45,7 +47,7 @@
                     </div>
                 </div>
 
-                <button class="button button_main">Заказать консультацию</button>
+                <button data-modal="consultations" class="button button_main">Заказать консультацию</button>
                 <div class="promo__link">
                     или 
                     <a href="#">Перейти в каталог</a>
@@ -115,6 +117,8 @@
                 <div><img src="img/slide_2.jpg" alt=""></div>
                 <div><img src="img/slide_3.jpg" alt=""></div>
             </div>
+            <button class="prev"><img src="/icons/left.svg"></button>
+            <button class="next"><img src="/icons/right.svg"></button>
         </div>
     </section>
 
@@ -126,7 +130,7 @@
                 <li class="catalog__tab"><div>Для бега</div></li>
                 <li class="catalog__tab"><div>Для триатлона</div></li>
             </ul>
-            <div class="catalog__content">
+            <div class="catalog__content  catalog__content_active">
                 <div class="catalog__item">
                     <div class="catalog__item_wrapper">
                         <div class="catalog__item_content">
@@ -135,9 +139,19 @@
                             <div class="catalog__item_descr">Для первых шагов в тренировках, основанных на сердечном ритме</div>
                             <a href="" class="catalog__item_link">Подробнее</a>
                         </div>
-                        <div class="catalog__item_list">
-                            hello
-                        </div>
+                        <ul class="catalog-item__list ">
+                            <li>Вы услышите звуковое оповещение о нужном пульсе во время тренировки;
+                            </li>
+                            <li>
+                            Вы увидите информативный графический индикатор целевых тренировочных зон пульса;
+                            </li>
+                            <li>
+                            Также Вы увидите информацию о расходе калорий за тренировку;</li>
+                            <li>
+                            Вы сможете посмотреть данные по 10 тренировкам.
+                            </li>
+                            <a href="#" class="catalog-item__back">назад</a>
+                        </ul>
                     </div>
                     <hr>
                     <div class="catalog__item_footer">
@@ -203,10 +217,46 @@
         </div>
     </section>
 
+    <div class="overlay">
+        <div class="modal" id="consultations">
+            <div class="modal_close">&times;</div>
+            <div class="modal_subtitle">Просто заполните форму заявки</div>
+            <div class="modal_decr">и мы перезвоним вам в течении 10 минут</div>
+            <form class="feed_form">
+                <input type="text" required placeholder="Ваше имя" class="name">
+                <input type="number" required placeholder="Ваш телефон" class="phone">
+                <input type="email" required placeholder="Ваш email" class="email">
+                <button class="button button_submit">Заказать консультацию</button>
+            </form>
+        </div>
 
-    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+        <div class="modal" id="order">
+            <div class="modal_close">&times;</div>
+            <div class="modal_subtitle">Ваш заказ</div>
+            <div class="modal_decr">Пульсометр Polar FT1</div>
+            <form class="feed_form">
+                <input type="text" required placeholder="Ваше имя" class="name">
+                <input type="number" required placeholder="Ваш телефон" class="phone">
+                <input type="email" required placeholder="Ваш email" class="email">
+                <button class="button button_submit">Купить</button>
+            </form>
+        </div>
+
+
+        <div class="modal modal_mini" id="modal">
+            <div class="modal_close">&times;</div>
+            <div class="modal_subtitle">Спасибо за вашу заявку!</div>
+            <div class="modal_decr">Наш чел свяжется с вами в ближайшее время</div>
+            
+        </div>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+
+    <!-- <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script src="js/slick.min.js"></script>
+    <script src="js/slick.min.js"></script> -->
     <script src="js/script.js"></script>
     
 </body>
