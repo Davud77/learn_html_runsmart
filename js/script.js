@@ -27,19 +27,20 @@ $(document).ready(function(){
 
     // Modal
 
-    $('[data-modal=consultation]').on('click', function() {
-        $('.overlay, #consultation').fadeIn('slow');
+    $('[data-modal=consultations]').on('click', function() {
+        $('.overlay, #consultations').fadeIn('slow');
     });
+
     $('.modal_close').on('click', function() {
-        $('.overlay, #consultation, #thanks, #order').fadeOut('slow');
+        $('.overlay, #consultations, #thanks, #order').fadeOut('slow');
     });
 
     $('.button_mini').each(function(i) {
         $(this).on('click', function() {
-            $('#order .modal_descr').text($('.catalog-item_subtitle').eq(i).text());
+            $('#order .modal_descr').text($('.catalog_item_subtitle').eq(i).text());
             $('.overlay, #order').fadeIn('slow');
         });
-    });
+    }); 
 
 
     function toggleSlide(item) {
