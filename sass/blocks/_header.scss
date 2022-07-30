@@ -2,13 +2,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    &__logo {
+    &_logo {
         width: 250px;
         img {
             width: 100%;
         }
     }
-    &__official {
+    &_official {
         color: #fff;
         font-size: 12px;
         font-weight: 500;
@@ -18,7 +18,7 @@
             font-size: 18px;
         }
     }
-    &__phone {
+    &_phone {
         display: block;
         color:#fff;
         font-size: 18px;
@@ -28,7 +28,7 @@
             text-decoration: none;
         }
     }
-    &__contacts {
+    &_contacts {
         display: flex;
         flex-direction: column;
         align-items: flex-end;

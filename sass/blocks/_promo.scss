@@ -2,33 +2,33 @@
     min-height: 650px;
     padding: 21px 0 93px 0;
     background: url(../img/main.jpg) center (center/cover) no-repeat;
-    &__wrapper {
+    &_wrapper {
         display: flex;
         flex-direction: column;
         align-items:flex-end;
         margin-top: 90px;
     }
-    &__header {
+    &_header {
         color: #fff;
         font-size: 42px;
         font-weight: 700;
         text-transform: uppercase;
         line-height: 42px;
     }
-    &__subheader {
+    &_subheader {
         margin-top: 17px;
         color: #fff;
         font-size: 24px;
         font-weight: 500;
         text-transform: uppercase;
     }
-    &__icons {
+    &_icons {
         margin-top: 65px;
         width: 425px;
         display: flex;
         justify-content: space-between;
     }
-    &__icon {
+    &_icon {
         width: 108px;
         text-align: center;
         color: #fff;
@@ -40,7 +40,7 @@
             margin-bottom: 20px;
         }
     }
-    &__link {
+    &_link {
         color: #fff;
         font-size: 16px;
         font-weight: 500;
