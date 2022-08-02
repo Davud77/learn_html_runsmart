@@ -8,6 +8,29 @@
   margin: 0 auto;
 }
 
+@-webkit-keyframes heartbeat {
+  from {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.4);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes heartbeat {
+  from {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.4);
+  }
+  to {
+    transform: scale(1);
+  }
+}
 .promo {
   min-height: 650px;
   padding: 21px 0 93px 0;
@@ -165,6 +188,16 @@
 .advantages_descr a {
   color: #ff0000;
   text-decoration: underline;
+}
+.advantages_icon_animated {
+  -webkit-animation-name: heartbeat;
+          animation-name: heartbeat;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
 }
 
 .title {
@@ -383,6 +416,15 @@
   font-size: 20px;
   font-weight: 500;
 }
+.consultation .error {
+  border: 1px solid red;
+}
+.consultation label.error {
+  color: #fff;
+  border: none;
+  text-align: center;
+  margin-bottom: 15px;
+}
 
 .feed_item {
   margin-top: 80px;
@@ -506,6 +548,14 @@
 }
 .modal_mini {
   min-height: 150px;
+}
+.modal .error {
+  border: 1px solid red;
+}
+.modal label.error {
+  border: none;
+  text-align: center;
+  margin-bottom: 15px;
 }
 
 #consultations, #order, #thanks {

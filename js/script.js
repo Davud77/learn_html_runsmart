@@ -55,4 +55,58 @@ $(document).ready(function(){
 
     toggleSlide('.catalog_item_link');
     toggleSlide('.catalog_item_list_back');
+
+
+    function validateForms(form) {
+        $(form).validate({
+            rules: {
+                name: {
+                    required: true,
+                    minlength: 5
+                },
+                phone: "required",
+                email: {
+                    required: true,
+                    email: true
+                }
+            },
+            messages: {
+                name: {
+                    required: "Введите свой email",
+                    minlength: jQuery.validator.format("Введите {0} символов")
+                },
+                phone: "Введите свой телефон",
+                email: {
+                    required: "Введите свой email",
+                    email: "косяк допустил ты"
+                }
+            }
+        });
+    }
+
+    validateForms('#consultation-feed_form');
+    validateForms('#consultations form');
+    validateForms('#order form');
+
+    $('input[name=phone]').mask("+7 (999) 999-99-99");
+
+    $('form').submit(function(e){
+        e.preventDefault();
+        $.ajax({
+            type: "POST",
+            url: "#",
+            data: $(this).serialize()
+        }).done(function(){
+            $(this).find("input").val("");
+            $('#consultations, #order').fadeOut();
+            $('.overlay, #thanks').fadeIn('slow');
+
+
+            $('form').trigger('reset');
+        });
+        return false;
+    });
+
+    new WOW().init();
+
 });
